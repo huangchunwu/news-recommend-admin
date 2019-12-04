@@ -2,8 +2,8 @@
 
 - 采用pom父子结构
 ```
--news-recommend-admin
-  -news-recommend-api
-  -news-recommend-provider
-  -news-recommend-web
+-- news-recommend-admin
+  --- news-recommend-api
+  --- news-recommend-provider
+  --- news-recommend-web
 ```
