@@ -13,4 +13,5 @@
 该项目，使用Java wrapper service 在Linux以守护线程的形式部署news-recommend-provider.jar,news-recommend-web.jar，非常好用。
 
 - UI
+
 我采用的是基于bootstrap的adminLTE
