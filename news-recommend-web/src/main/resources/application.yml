@@ -1,0 +1,12 @@
+server:
+    port: 8246
+## Dubbo 服务提供者配置
+spring:
+    dubbo:
+        application:
+            name: dubbo_client
+        registry:
+            address: zookeeper://zookeeper.1:2181
+        scan:   com.hasfun.news.recommend.controller
+
+

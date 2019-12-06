@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>full</id>
+    <formats>
+        <format>dir</format>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+
+    <fileSets>
+        <fileSet>
+            <outputDirectory>/bin</outputDirectory>
+            <directory>wrapper/bin</directory>
+            <fileMode>755</fileMode>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>/conf</outputDirectory>
+            <directory>wrapper/conf</directory>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>/lib</outputDirectory>
+            <directory>wrapper/lib</directory>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>/logs</outputDirectory>
+            <directory>wrapper/logs</directory>
+        </fileSet>
+
+    </fileSets>
+
+    <files>
+        <file>
+            <outputDirectory>/conf</outputDirectory>
+            <source>${basedir}/src/main/resources/application.yml</source>
+        </file>
+        <file>
+            <outputDirectory>/conf</outputDirectory>
+            <source>${basedir}/src/main/resources/logback.xml</source>
+        </file>
+        <file>
+            <outputDirectory>/lib</outputDirectory>
+            <source>${project.build.directory}/${project.build.finalName}.jar</source>
+        </file>
+    </files>
+</assembly>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="20 seconds">
+
+    <property name="LEVEL" value="INFO" />
+    <logger name="io.netty" level="info"/>    
+    <logger name="org.apache" level="info"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>[%file:%line] [%level] %msg%n</Pattern>
+        </layout>
+    </appender>
+
+	<appender name="DRF" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/news-recommend-web.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder>
+           <pattern>%-5level %d %logger{15}:[%L] - %message%n</pattern>
+           <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref="DRF" />
+        <includeCallerData>true</includeCallerData>
+    </appender>
+    
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
