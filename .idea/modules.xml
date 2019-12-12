@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/news-recommend-admin.iml" filepath="$PROJECT_DIR$/.idea/news-recommend-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-recommend-api/news-recommend-api.iml" filepath="$PROJECT_DIR$/news-recommend-api/news-recommend-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-recommend-provider/news-recommend-provider.iml" filepath="$PROJECT_DIR$/news-recommend-provider/news-recommend-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-recommend-web/news-recommend-web.iml" filepath="$PROJECT_DIR$/news-recommend-web/news-recommend-web.iml" />
+    </modules>
+  </component>
+</project>
