@@ -11,3 +11,16 @@ spring:
             name:  dubbo
             port:  20880
         scan:   com.hasfun.news.recommend.provider
+
+
+management:
+    # 默认Actuator只暴露了health和info端点，在SpringBoot的application.yml配置文件中加入这句话暴露所有端点
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    # 代表启用单独的url地址来监控Spring Boot应用，为了安全一般都启用独立的端口来访问后端的监控信息
+    server:
+        port: 1002
+        servlet:
+            context-path: /monitor
