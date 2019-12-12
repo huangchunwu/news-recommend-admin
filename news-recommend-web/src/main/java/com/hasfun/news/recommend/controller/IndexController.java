@@ -17,4 +17,5 @@ public class IndexController {
         model.addAttribute("list", recommendConfigDubboService.queryRecommendCongfigList());
         return "index";
     }
+
 }
