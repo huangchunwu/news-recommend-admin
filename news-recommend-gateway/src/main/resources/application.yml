@@ -17,7 +17,7 @@ spring:
     name: news-recommend-gateway
   cloud:
     consul:
-      host: 172.19.165.22
+      host: 47.100.240.207
       port: 8500
       discovery:
         instance-id: ${spring.application.name}-ip
@@ -31,5 +31,5 @@ spring:
             - AddRequestHeader=header, addHeader
             - AddRequestParameter=param, addParam
           predicates:
-            - Path=/news/recommend
+            - Path=/news/recommend/**
 
