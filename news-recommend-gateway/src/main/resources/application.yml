@@ -7,11 +7,9 @@ management:
     web:
       exposure:
         include: "*"
-  # 代表启用单独的url地址来监控Spring Boot应用，为了安全一般都启用独立的端口来访问后端的监控信息
-  server:
-    port: 1009
-    servlet:
-      context-path: /monitor
+  endpoint:
+    gateway:
+      enabled: true
 
 
 spring:
@@ -19,11 +17,12 @@ spring:
     name: news-recommend-gateway
   cloud:
     consul:
-      host: 47.100.240.207
+      host: 172.19.165.22
       port: 8500
       discovery:
-        health-check-path: /monitor/actuator/health
-        health-check-interval: 10s
+        instance-id: ${spring.application.name}-ip
+        prefer-ip-address: true
+        tags: ${spring.application.name}-ip
     gateway:
       routes:
         - id: news-recommend-web
