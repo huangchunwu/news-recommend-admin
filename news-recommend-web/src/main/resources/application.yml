@@ -1,5 +1,5 @@
 server:
-    port: 8246
+    port: 1001
 ## Dubbo 服务提供者配置
 spring:
     dubbo:
@@ -17,7 +17,3 @@ management:
             exposure:
                 include: "*"
     # 代表启用单独的url地址来监控Spring Boot应用，为了安全一般都启用独立的端口来访问后端的监控信息
-    server:
-        port: 1001
-        servlet:
-            context-path: /monitor
