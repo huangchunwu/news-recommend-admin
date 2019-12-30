@@ -3,13 +3,10 @@ rvm:
   - 2.2
   - jruby
 
-jobs:
-  include:
-    - stage: GitHub Release
-        script: echo "Deploying to GitHub releases ..."
-        deploy:
-          provider: releases
-          api_key: $GITHUB_OAUTH_TOKEN
-          skip_cleanup: true
-          on:
-            tags: true
+deploy:
+  provider: releases
+  api_key: "fdswfdfdewew"
+  file: "*.tar.gz"
+  skip_cleanup: true
+  on:
+    tags: true
