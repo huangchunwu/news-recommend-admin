@@ -6,7 +6,7 @@ spring:
         application:
             name: dubbo_client
         registry:
-            address: zookeeper://47.100.240.207:2181
+            address: zookeeper://172.17.0.1:2181
         scan:   com.hasfun.news.recommend.controller
 
 

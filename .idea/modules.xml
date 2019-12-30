@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/news-recommend-admin.iml" filepath="$PROJECT_DIR$/.idea/news-recommend-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/news-recommend-api/news-recommend-api.iml" filepath="$PROJECT_DIR$/news-recommend-api/news-recommend-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-recommend-gateway/news-recommend-gateway.iml" filepath="$PROJECT_DIR$/news-recommend-gateway/news-recommend-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/news-recommend-provider/news-recommend-provider.iml" filepath="$PROJECT_DIR$/news-recommend-provider/news-recommend-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/news-recommend-web/news-recommend-web.iml" filepath="$PROJECT_DIR$/news-recommend-web/news-recommend-web.iml" />
     </modules>
