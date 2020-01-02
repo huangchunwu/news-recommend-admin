@@ -6,6 +6,7 @@ rvm:
 
 deploy:
   provider: releases
-  api_key: "82087d5c6b1ba4099ff4c23c576f45e6c53a27db"
+  api_key:           # 填写 GitHub 的 token （Settings -> Personal access tokens -> Generate new token）
+    secure: 782087d5c6b1ba4099ff4c23c576f45e6c53a27db
   file: "*.tar.gz"
   skip_cleanup: true
