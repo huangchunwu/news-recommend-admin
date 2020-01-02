@@ -5,7 +5,7 @@ rvm:
 
 deploy:
   provider: releases
-  api_key: "fdswfdfdewew"
+  api_key: "82087d5c6b1ba4099ff4c23c576f45e6c53a27db"
   file: "*.tar.gz"
   skip_cleanup: true
   on:
